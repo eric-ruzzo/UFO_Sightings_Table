@@ -43,4 +43,22 @@ submit.on("click", function() {
     // Filter data to match input value
     var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
     console.log(filteredData);
+
+    d3.selectAll("td").remove();
+
+    filteredData.forEach((sighting) => {
+        console.log(sighting);
+        
+        // Append a table row for each data array
+        var row = tbody.append("tr");
+    
+        // Loop through each key value pair in each array
+        Object.entries(sighting).forEach(([key,value]) => {
+        
+            // Add each value in cell in new row
+            var cell = tbody.append("td");
+            console.log(value);
+            cell.text(value);
+        });
+    });
 });
