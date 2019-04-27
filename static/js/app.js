@@ -68,7 +68,7 @@ submit.on("click", function() {
 });
 
 // Create array for additional filters
-var newFilters = ["City", "State", "Country", "Shape"];
+/*var newFilters = ["City", "State", "Country", "Shape"];
 
 // Select ul tag to append list items for each filter value
 var filterSection = d3.select("ul");
@@ -90,4 +90,4 @@ function addFilters() {
     };
 };
 
-addFilters()
+addFilters()*/
